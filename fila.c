@@ -62,3 +62,27 @@ void destroiFila(FILA f) {
   free(f);
 }
 
+void insereAntes(FILA f, int item){
+  link aux, aux2;
+  aux = novoNo(int item, link next);
+  if(maisAntigo != NULL){
+    aux->next=maisAntigo;
+    maisAntigo=aux;  
+  }
+  else
+  return 0;
+}
+
+void removeUltimo(FILA f){
+  link aux;
+  aux = maisAntigo;
+  if(maisAntigo != maisNovo){
+    while(aux -> next != maisNovo){
+      if(aux->next==maisNovo){
+        aux = maisNovo;
+      }
+      aux = aux -> next;
+    }
+  }else
+  printf("Impossivel remover");
+}
