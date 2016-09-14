@@ -11,7 +11,7 @@ int main () {
   imprimirFila(alunos);
 
   while(!filaVazia(alunos))
-    printf ("removido: %d \n", remover(alunos));
+    printf ("removido: %d \n", removerPrimeiro(alunos));
 
 
   inserir(alunos, 10);
