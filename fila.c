@@ -20,7 +20,7 @@ FILA novaFila() {
   return f;
 }
 
-void inserir(FILA f, int e) {
+void inserirDepois(FILA f, int e) {
   if(f->maisAntigo == NULL) {
     f->maisAntigo = f->maisNovo = novoNo(e, NULL);
   } else {
@@ -29,7 +29,7 @@ void inserir(FILA f, int e) {
   }
 }
 
-int remover(FILA f){
+int removerPrimeiro(FILA f){
   int x;
   link t;
   if(filaVazia(f)){
@@ -73,7 +73,7 @@ void insereAntes(FILA f, int item){
   return 0;
 }
 
-void removeUltimo(FILA f){
+void removerUltimo(FILA f){
   link aux;
   aux = maisAntigo;
   if(maisAntigo != maisNovo){
